@@ -204,7 +204,7 @@ form .UPLOAD_box a{
 	padding: 5px 10px 5px 10px;
 }
 #head .menu{
-	background: url(../img/bar.jpg) repeat-x;
+	background: url(../images/bar.jpg) repeat-x;
 	width: 900px;
 	height: 30px;
 	margin: 10px auto 0 auto;
@@ -264,7 +264,7 @@ form .UPLOAD_box a{
 }
 #link_box{
 	position: absolute;
-	background: url(../img/clf_bottom.jpg) repeat-x;
+	background: url(../images/clf_bottom.jpg) repeat-x;
 	height: 100px;
 	bottom: 35px;
 	margin: 15px auto 0 auto;
@@ -438,7 +438,7 @@ hr{
 #main_2 .left .title{
 	width: 200px;
 	height: 35px;
-	background: url(../img/title.jpg) repeat-x;
+	background: url(../images/title.jpg) repeat-x;
 	text-align: center;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 13px;
@@ -642,7 +642,7 @@ hr{
 	height: 50px;
 	line-height: 45px;
 	text-align: center;
-	background: url(../img/price_button.jpg) repeat;
+	background: url(../images/price_button.jpg) repeat;
 	font-family: Arial, Helvetica, sans-serif, '微軟正黑體';
 	font-size: 15px;
 	color: #FFF;
@@ -650,7 +650,7 @@ hr{
 	margin-top: 5px;
 }
 #main_2 .right .prdata_box p input.price_button:hover{
-	background: url(../img/price_button_a.jpg) repeat;
+	background: url(../images/price_button_a.jpg) repeat;
 }
 #main_2 .right hr.hr{
 	width: 660px;
@@ -682,7 +682,7 @@ hr{
 	font-size: 13px;
 	color: #666;
 	margin: 0;
-	background: url(../img/bread.jpg) no-repeat right 5px;
+	background: url(../images/bread.jpg) no-repeat right 5px;
 	padding: 0 15px 0px 10px;
 }
 #main_2 .right .path ul li a{
