@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+#box{
+	width: 640px;
+	height:640px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -320px -320px 0 0;
+}
+#box .A{
+	width: 80px;
+	height: 80px;
+	background: #CCC;
+	float: left;
+}
+#box .A.B{
+	background: #000;
+}

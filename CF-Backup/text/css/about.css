@@ -1,0 +1,132 @@
+@charset "utf-8";
+#main {
+	height: 890px;
+	width: 993px;
+	margin: auto;
+}
+#logo {
+	height: 85px;
+	width: 181px;
+	float: right;
+}
+#top {
+	height: 156px;
+	width: 993px;
+	background-image: url(../img/about/top.jpg);
+	position: relative;
+}
+#menu {
+	height: 85px;
+	width: 812px;
+	float: right;
+}
+#menu {
+}
+#menu-1 {
+	height: 43px;
+	width: 520px;
+	margin-top: 40px;
+	margin-left: 99px;
+}
+#main01 {
+	width: 993px;
+	height: 735px;
+	position: relative;
+
+}
+#main_re {
+	height: 735px;
+	width: 199px;
+	float: left;
+	background-image: url(../img/about/left01.jpg);
+	position: relative;
+}
+#main_left {
+	float: right;
+	width: 793px;
+	height: 735px;
+	background-image: url(../img/about/re01.jpg);
+}
+#batt {
+	width: 993px;
+	height: 50px;
+}
+#batt_left {
+	height: 353px;
+	width: 769px;
+	float: left;
+}
+#menu_battle01 {
+	width: 715px;
+	height: 280px;
+	margin-top: 50px;
+	margin-left: 38px;
+	position: relative;
+}
+#battle_reint {
+	height: 353px;
+	width: 224px;
+	float: left;
+}
+#battme_battme {
+	height: 50px;
+	width: 993px;
+	background-image: url(../img/index/battle03.jpg);
+	float: left;
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 14px;
+	color: #666;
+	text-align: center;
+	letter-spacing: 1px;
+	line-height: 25px;
+	text-decoration: none;
+}
+#top1 {
+	height: 25px;
+	width: 100px;
+}
+
+#apDiv1 {
+	position: absolute;
+	width: 711px;
+	height: 115px;
+	z-index: 1;
+	left: 247px;
+	top: 59px;
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 16px;
+	color: #000;
+}
+#apDiv8 {
+	position: absolute;
+	width: 94px;
+	height: 49px;
+	z-index: 1;
+	left: 28px;
+	top: 96px;
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 14px;
+	color: #333;
+}
+#apDiv9 {
+	position: absolute;
+	width: 200px;
+	height: 21px;
+	z-index: 1;
+	left: 728px;
+	top: 1px;
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 14px;
+	color: #FFF;
+}
+
+h1{
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 16px;
+	color: #333;
+	}
+h2{
+	font-family: "微軟正黑體", "新細明體";
+	font-size: 14px;
+	color: #555;
+	}
