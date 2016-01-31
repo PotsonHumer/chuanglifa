@@ -1,7 +1,7 @@
 <?php
 
-	$config["root"] = "/V2/";
-	$config["url"] = "59.126.99.159";
+	$config["root"] = "/new/";
+	$config["url"] = "www.chuanglifa.com";
 	$config["host"] = 'http://'.$config["url"].$config["root"];
 	$config["manage"] = "ogsadmin/";
 	
@@ -81,12 +81,12 @@
 	
 	
 	#### DB connect ####
-	$config['prefix'] = 'ogs'; # 資料表前贅參數
+	$config['prefix'] = 'new'; # 資料表前贅參數
 	$config["connect"] = array(
 		'host' => 'localhost',
-		'user' => 'root',
-		'pass' => 'studiodd',
-		'db' => 'ogs_v2'
+		'user' => 's870887s',
+		'pass' => 'ankh0513',
+		'db' => 'chuanglifa'
 	);
 	####################
 	
@@ -111,7 +111,7 @@
 	############
 	
 
-	$config["sess"] = 'OGSV2';
+	$config["sess"] = 'chuanglifaNew';
 
 	
 	#### country ####
