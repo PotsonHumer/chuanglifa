@@ -11,9 +11,8 @@
 			SEO::load('index');
 			SEO::output();
 
-			NEWS::idx_row();
-
-			new AD;
+			#NEWS::idx_row();
+			#new AD;
 
 			CORE::res_init('super_slide','marquee','box');
 
