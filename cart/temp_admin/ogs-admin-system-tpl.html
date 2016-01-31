@@ -1,0 +1,26 @@
+<h2>系統設定</h2>
+
+<form action="{TAG_MANAGE_PATH}system-replace/" method="post">
+	<table>
+		<tr>
+			<th>系統信箱</th>
+			<td>
+				<input type="text" name="email" value="{VALUE_EMAIL}" size="300" placeholder="(發出購物確認信的信箱)">
+			</td>
+		</tr>
+		<tr>
+			<th>購物車運費</th>
+			<td>
+				<input type="text" name="ship" value="{VALUE_SHIP}" size="50">
+			</td>
+		</tr>
+		<tr>
+			<th>滿額免運</th>
+			<td>
+				<input type="text" name="ship_free" value="{VALUE_SHIP_FREE}" size="50"><span class="span">(設定購物車到達此金額就免運費)</span>
+			</td>
+		</tr>
+	</table>
+
+	<input type="submit" name="send" value="儲存">
+</form>

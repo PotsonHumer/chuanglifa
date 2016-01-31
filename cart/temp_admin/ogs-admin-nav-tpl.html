@@ -1,0 +1,31 @@
+<nav class="animate">
+	<h2 style="margin-left: 0;">功能選單</h2>
+	<ul>
+		<li>
+			<label><a class="white" href="{TAG_MANAGE_PATH}system/">基本設定</a></label>
+			<ul class="animate">
+				<li><a {CURRENT_NAV_SYSTEM} href="{TAG_MANAGE_PATH}system/">系統設定</a></li>
+			</ul>
+		</li>
+		<li>
+			<label>庫存管理</label>
+			<ul class="animate">
+				<li><a {CURRENT_NAV_STOCK_CATE} href="{TAG_MANAGE_PATH}stock/cate/">庫存類別管理</a></li>
+				<li><a {CURRENT_NAV_STOCK_ITEM} href="{TAG_MANAGE_PATH}stock/item/">庫存項目管理</a></li>
+				<li><a {CURRENT_NAV_STOCK} href="{TAG_MANAGE_PATH}stock/">庫存列表</a></li>
+			</ul>
+		</li>
+		<li>
+			<label><a class="white" href="{TAG_MANAGE_PATH}member/">會員管理</a></label>
+			<ul class="animate">
+				<li><a {CURRENT_NAV_MEMBER} href="{TAG_MANAGE_PATH}member/">會員列表</a></li>
+			</ul>
+		</li>
+		<li>
+			<label><a class="white" href="{TAG_MANAGE_PATH}order/">訂單管理</a></label>
+			<ul class="animate">
+				<li><a {CURRENT_NAV_ORDER} href="{TAG_MANAGE_PATH}order/">訂單列表</a></li>
+			</ul>
+		</li>
+	</ul>
+</nav>

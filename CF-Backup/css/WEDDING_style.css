@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background: #85eae4;
+	background: url(../img/bk.png) repeat;
+}
+#body_left{
+	width: 300px;
+	height: 700px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -350px;
+	margin-left: 0;
+	z-index: 1;
+}
+#body_right{
+	width: 300px;
+	height: 700px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin-top: -350px;
+	margin-right: 0;
+	z-index: 6;
+	right: 0;
+}
+#index{
+	width: 800px;
+	height: 550px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -275px;
+	margin-left: -400px;
+}
+#index .pic{
+	width: 800px;
+	height: 500px;
+	float: left;
+}
+#index .text{
+	width: 800px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	background: url(../img/bb.png) repeat-x;
+}
+#index .text a{
+	color: #FFF;
+	font-family: Helvetica,'微軟正黑體';
+	font-size: 16px;
+	line-height: 50px;
+	text-decoration: none;
+	font-weight: 550;
+}
+#index .text a:hover{
+	color: #85eae4;
+}
+#main{
+	width: 1300px;
+	margin: 25px auto 0 auto;
+}
+#main .show_pic{
+	width: 1000px;
+	height: 700px;
+	float: left;
+	background: #000;
+}
+#main .show_left{
+	width: 150px;
+	height: 700px;
+	float: left;
+	border-top-left-radius: 10px;
+}
+#main .show_right{
+	width: 150px;
+	height: 700px;
+	float: left;
+	border-top-right-radius: 10px;
+}
+.img_go{
+	width: 1000px;
+	height: 700px;
+	position: absolute;
+	z-index: 5;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*----輪播小圖-----*/
+#Preview{
+	width: 1300px;
+	height: 120px;
+	float: left;
+	background: #333;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.Preview_box{
+	width: 45px;
+	height: 45px;
+	float: left;
+	margin-left: 19px;
+	margin-top: 10px;
+	background-color: #FFF;
+	cursor: pointer;
+	border-radius: 5px;
+}
+/*----輪播大圖-----*/
+#pic_st1{
+	background: url(../img/room_pic/st01-b.png);
+}
+#pic_st2{
+	background: url(../img/room_pic/st02-b.png);
+}
+#pic_st3{
+	background: url(../img/room_pic/st03-b.png);
+}
+#pic_st4{
+	background: url(../img/room_pic/st04-b.png);
+}
+#pic_st5{
+	background: url(../img/room_pic/st05-b.png);
+}
+#pic_st6{
+	background: url(../img/room_pic/st06-b.png);
+}
+#pic_st7{
+	background: url(../img/room_pic/st07-b.png);	
+}
+#pic_st8{
+	background: url(../img/room_pic/st08-b.png);
+}
+#pic_st9{
+	background: url(../img/room_pic/st09-b.png);
+}
+#pic_st10{
+	background: url(../img/room_pic/st10-b.png);
+}
+#pic_st11{
+	background: url(../img/room_pic/st11-b.png);
+}
+#pic_st12{
+	background: url(../img/room_pic/st12-b.png);
+}
+#pic_st13{
+	background: url(../img/room_pic/st13-b.png);
+}
+#pic_st14{
+	background: url(../img/room_pic/st14-b.png);	
+}
+#pic_st15{
+	background: url(../img/room_pic/st15-b.png);
+}
+#pic_st16{
+	background: url(../img/room_pic/st16-b.png);
+}
+#pic_st17{
+	background: url(../img/room_pic/st17-b.png);
+}
+#pic_st18{
+	background: url(../img/room_pic/st18-b.png);
+}
+#pic_st19{
+	background: url(../img/room_pic/st19-b.png);	
+}
+#pic_st20{
+	background: url(../img/room_pic/st20-b.png);	
+}
+#pic_st21{
+	background: url(../img/room_pic/st21-b.png);	
+}
+#pic_st22{
+	background: url(../img/room_pic/st22-b.png);	
+}
+#pic_st23{
+	background: url(../img/room_pic/st23-b.png);	
+}
+#pic_st24{
+	background: url(../img/room_pic/st24-b.png);	
+}
+#pic_st25{
+	background: url(../img/room_pic/st25-b.png);	
+}
+#pic_st26{
+	background: url(../img/room_pic/st26-b.png);	
+}
+#pic_st27{
+	background: url(../img/room_pic/st27-b.png);	
+}
+#pic_st28{
+	background: url(../img/room_pic/st28-b.png);	
+}
+#pic_st29{
+	background: url(../img/room_pic/st29-b.png);	
+}
+#pic_st30{
+	background: url(../img/room_pic/st30-b.png);	
+}
+#pic_st31{
+	background: url(../img/room_pic/st31-b.png);	
+}
+#pic_st32{
+	background: url(../img/room_pic/st32-b.png);	
+}
+#pic_st33{
+	background: url(../img/room_pic/st33-b.png);	
+}
+#pic_st34{
+	background: url(../img/room_pic/st34-b.png);	
+}
+#pic_st35{
+	background: url(../img/room_pic/st35-b.png);	
+}
+#pic_st36{
+	background: url(../img/room_pic/st36-b.png);	
+}
+#pic_st37{
+	background: url(../img/room_pic/st37-b.png);	
+}
+#pic_st38{
+	background: url(../img/room_pic/st38-b.png);	
+}
+#pic_st39{
+	background: url(../img/room_pic/st39-b.png);	
+}
+#pic_st40{
+	background: url(../img/room_pic/st40-b.png);	
+}

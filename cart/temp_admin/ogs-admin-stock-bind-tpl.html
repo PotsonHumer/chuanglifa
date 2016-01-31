@@ -1,0 +1,166 @@
+<h2>庫存管理 > 規格綁定設定</h2>
+
+<p>設定產品規格</p>
+
+<div id="column_block">
+	<div class="column">
+		<input type="button" name="show_pc" value="顯示其他產品大類"></p>
+
+		<table>
+			<!--
+			<tr>
+				<th width="270">產品名稱</th>
+				<th width="110">規格管理</th>
+			</tr>
+			-->
+
+			<!-- START BLOCK : TAG_P_LIST -->
+
+			<!-- START BLOCK : TAG_CATE_LIST -->
+			<tr class="pc">
+				<th width="270">{VALUE_CATE_NAME}</th>
+				<th width="110">主分類</th>
+			</tr>
+			<!-- END BLOCK : TAG_CATE_LIST -->
+
+			<!-- START BLOCK : TAG_SUBCATE_LIST -->
+			<tr class="sub">
+				<th>{VALUE_CATE_NAME}</th>
+				<th>次分類</th>
+			</tr>
+			<!-- END BLOCK : TAG_SUBCATE_LIST -->
+
+			<tr class="p {VALUE_P_CURRENT}">
+				<td><a href="{VALUE_P_LINK}" target="_blank">{VALUE_P_NAME}</a></td>
+				<td>
+					<input type="button" name="stock_path" value="規格管理" rel="{TAG_MANAGE_PATH}stock/{VALUE_P_ID}/">
+				</td>
+			</tr>
+			<!-- END BLOCK : TAG_P_LIST -->
+		</table>
+	</div>
+
+	<div class="column">
+		<!-- START BLOCK : TAG_NONE_STOCK -->
+		<p class="icon-arrow-left">請先點選 "規格管理"</p>
+		<!-- END BLOCK : TAG_NONE_STOCK -->
+		
+		<!-- START BLOCK : TAG_STOCK_BLOCK -->
+		<p>{VALUE_P_NAME}</p>
+
+		<form action="{TAG_MANAGE_PATH}stock/replace/" method="post">
+			<table id="row_table">
+				<tr>
+					<th>排序</th>
+					<th>規格 (不選擇則不會納入組合)</th>
+					<th>名稱</th>
+					<th>狀態</th>
+					<th>價格</th>
+					<th>庫存</th>
+					<th>可用庫存</th>
+					<th>未出貨庫存</th>
+					<th>有運費勾選</th>
+					<th>刪除</th>
+				</tr>
+
+				<!-- START BLOCK : TAG_STOCK_LIST -->
+				<tr class="row">
+					<td><span class="icon-shuffle">按此拖曳改變排序</span></td>
+					<td>{VALUE_STOCK_SELECT}</td>
+					<td><input type="text" name="name[]" value="{VALUE_NAME}" size="250" placeholder="如不填內容 系統將用規格名稱組合"></td>
+					<td>
+						<select name="status[]">
+							<option value="1" {VALUE_STATUS_CK1}>開啟</option>
+							<option value="0" {VALUE_STATUS_CK0}>關閉</option>
+						</select>
+					</td>
+					<td><input type="text" name="price[]" value="{VALUE_PRICE}" size="50"></td>
+					<td><input type="text" name="amount[]" value="{VALUE_AMOUNT}" size="50"></td>
+					<td class="center">{VALUE_REAL_AMOUNT}</td>
+					<td class="center">{VALUE_UNSHIP_AMOUNT}</td>
+					<td class="center"><input type="checkbox" name="ship[]" value="1" {VALUE_SHIP_CK}></td>
+					<td>
+						<input type="hidden" name="p_id[]" value="{VALUE_P_ID}">
+						<input type="hidden" name="id[]" value="{VALUE_ID}">
+						<input type="button" name="del" value="刪除" rel="{TAG_MANAGE_PATH}stock/del/">
+					</td>
+				</tr>
+				<!-- END BLOCK : TAG_STOCK_LIST -->
+			</table>
+
+			<p>
+				<input type="button" name="add" value="增加規格" rel="row_table">
+				<input type="submit" name="send" value="儲存">
+			</p>
+		</form>
+		<!-- END BLOCK : TAG_STOCK_BLOCK -->
+	</div>
+</div>
+
+<hr class="clear">
+
+<script>
+	$(function(){
+		$("input[name=stock_path]").click(function(){
+			var PATH = $(this).attr("rel");
+			location.href = PATH;
+		});
+
+		js_add_row(
+			'<tr class="row">'+
+				'<td><span class="icon-shuffle">按此拖曳改變排序</span></td>'+
+				'<td>{JS_STOCK_SELECT}</td>'+
+				'<td><input type="text" name="name[]" size="250" placeholder="如不填內容 系統將用規格名稱組合"></td>'+
+				'<td>'+
+					'<select name="status[]">'+
+						'<option value="1">開啟</option>'+
+						'<option value="0">關閉</option>'+
+					'</select>'+
+				'</td>'+
+				'<td><input type="text" name="price[]" size="50"></td>'+
+				'<td><input type="text" name="amount[]" size="50"></td>'+
+				'<td class="center">0</td>'+
+				'<td class="center"><input type="checkbox" name="ship[]" value="1"></td>'+
+				'<td>'+
+					'<input type="hidden" name="p_id[]" value="{JS_P_ID}">'+
+					'<input type="hidden" name="id[]">'+
+					'<input type="button" name="del" value="刪除" rel="{TAG_MANAGE_PATH}stock/del/">'+
+				'</td>'+
+			'</tr>'
+		);
+
+		//----
+		$(".pc").click(function(){
+			$(".p,.sub").hide();
+			$(".pc").removeClass("active");//.hide();
+			$(this).show().addClass("active").nextUntil(".pc").show();
+			//$("input[name=show_pc]").show();
+		});
+
+		$("input[name=show_pc]").click(function(){
+			$(".pc").show();
+		});
+
+		var CURRENT = $(".p.current").length;
+		if(CURRENT > 0){
+			$(".pc").each(function(KEY){
+				var TR_NUM = $(this).nextUntil(".pc").length;
+				var NEXT_OBJ = $(this);
+				var PC_CURRENT = false;
+				var I = 0;
+
+				while(++I <= TR_NUM){
+					NEXT_OBJ = NEXT_OBJ.next();
+					var NOW_CLASS = NEXT_OBJ.attr("class");
+					if(NOW_CLASS == "p current"){
+						PC_CURRENT = true;
+					}
+				}
+
+				if(PC_CURRENT){
+					$(this).trigger("click");
+				}
+			});
+		}
+	});
+</script>
