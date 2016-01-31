@@ -1,35 +1,67 @@
-<div id="footer_box">
-	<div class="footer">
-		<div class="f_link ot">
-			<ul>
-				<li><a href="{TAG_ROOT_PATH}">Index</a></li>
-				<li><a href="{TAG_ROOT_PATH}intro/">About</a></li>
-				<li><a href="{TAG_ROOT_PATH}products/">Product</a></li>
-				<li><a href="{TAG_ROOT_PATH}faq/">Shopping</a></li>
-				<li><a href="{TAG_ROOT_PATH}news/">News</a></li>
-				<li><a href="{TAG_ROOT_PATH}contact/">Contact</a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="copyright">&copy; YATAI 2015 HENGZUAN All Rights Reserved.</div>
+<div class="outer" id="link_box">
+    <div class="box">
+        <div class="link">
+            經營項目Services<br />
+            <hr size="1" align="left" noshade width="100%" color="FFFFFF"><br />
+            <a href="http://www.chuanglifa.com/product_data.php?dt_id=1">環保杯蓋</a>∣
+            <a href="http://www.chuanglifa.com/order.php?a_id=6">紙杯製作</a>∣
+            <a href="http://www.chuanglifa.com/business.php?b_id=2">免洗周邊</a>∣
+            <a href="http://www.chuanglifa.com/about.php?a_id=4">綠能產品</a>
+        </div>
+        <div class="link">
+            其它項目Other<br />
+            <hr size="1" align="left" noshade width="100%" color="FFFFFF"><br />
+            <a href="http://www.chuanglifa.com/order.php?a_id=3">訂購流程</a>∣
+            <a href="http://www.chuanglifa.com/business.php?b_id=4">容器開發</a>∣
+            <a href="http://www.chuanglifa.com/news.php?a_id=1">最新消息</a>∣
+            <a href="http://www.chuanglifa.com/add_map.php">聯絡我們</a>
+        </div>
+        <div class="link">
+            恆鑽設計美術工作室<br />
+            HENGZUAN Art studio<br />
+            <a href="https://www.facebook.com/hengzuan?ref=hl">HENGZUAN-FB粉絲團</a><br />
+        </div>
+        <div class="link">
+            <a href="https://www.facebook.com/chuanglifa" target="_new">CHUNG LI FA-FB粉絲團</a><br />
+            <img src="{TAG_THEME_PATH}LINE.png" width="30" height="30" border="0" align="absmiddle" />
+            <font color="#99FF00">ID : CHUANGLIFA</font>
+        </div>
+    </div>
 </div>
+<div class="outer" id="footer">&copy; CHUNGLIFA 2014 HENGZUAN All Rights Reserved. 《法律顧問-林本能法律事務所》</div>
+
 
 <script>
-	var FOOTER_HANDLE = function(){
-		var WIN_H = $(window).height();
-		var DOC_H = $(document).height();
+    $(function(){
+        $("select[name=jumpMenu]").change(function(){
+            var LAN_SRC = $(this).find("option:selected").val();
+            window.open(LAN_SRC,'_self')
+        });
 
-		if(DOC_H > WIN_H){
-			$("#adv_box").css({ "margin":"0 0 20px 0" });
-			$("#main_box").css({ "margin":"0 0 20px 0" });
-			$("#footer_box").css({ "position":"relative" });
-		}
-	}
+        //----
+        $("#main_2").resize(function(){
+            footer_counter();
+        });
 
-	$(function(){
-		FOOTER_HANDLE();
-		$(window).resize(function(){
-			FOOTER_HANDLE();
-		});
-	});
+        //----
+        $("#gotop").click(function(){
+            $("html,body").animate({ scrollTop:0 },1000);
+        });
+
+        //----
+        $(window).scroll(function(){
+            if($(this).scrollTop() > 300){
+                $('#gotop').fadeIn("fast");
+            }else{
+                $('#gotop').stop().fadeOut("fast");
+            }
+        });
+
+        //----
+        $(document).scroll_box({
+            ACT_TIMER : 1500, //動作花費時間
+            }, function(DATA){
+            //callback
+        });
+    });
 </script>
